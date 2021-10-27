@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header,main,footer{
+
+            width: 1000px;
+            background-color: silver;
+            border-radius: 5px;
+            margin: 0 auto;
+
+        }
+
+        header{
+
+            height: 150px;
+            
+        }
+
+        main{
+
+            height: 500px;
+            margin: 10px auto;
+            padding: 1px 0;
+        
+        }
+
+        footer{
+
+            height: 150px;
+        
+        }
+
+        main>div.middle{
+
+            float: left;
+            margin: 10px 0;
+            background-color: snow;
+            border-radius: 5px;
+            height: 480px;
+
+        }
+
+        #left{
+            width: 200px;     
+            margin-left: 10px;
+        }
+
+        #center{
+            width: 610px;
+            margin: 10px 10px;
+        }
+
+
+        #right{
+            width: 150px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 创建头部 -->
+    <header></header>
+
+    <!-- 创建网页的主体 -->
+    <main>
+
+        <div class="middle" id="left"></div>
+        <div class="middle" id="center"></div>
+        <div class="middle" id="right"></div>
+
+    </main>
+
+    <!-- 网页的底部 -->
+    <footer></footer>
+</body>
+</html>

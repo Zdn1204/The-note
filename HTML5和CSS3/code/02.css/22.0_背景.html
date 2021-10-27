@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+
+            background-color: red;
+            /* 
+            background-image 设置背景图片
+                - 可以同时设置背景图片和背景颜色，这样背景颜色就会成为图片的背景色
+                - 如果背景图片小于元素，则背景图片会自动在元素中平铺，将元素铺满
+                - 如果背景图片大于元素，将会有一部分背景无法完全显示
+                - 如果背景图片和元素一样大，则会直接正常显示
+             */
+
+            background-image: url("../img/bgimg.jpg");
+
+            /*
+            background-repeat 用来设置背景的重复方式
+                可选值
+                    repeat 默认值 背景会颜值x轴 y轴双方向重复
+                    repeat-x 沿着x轴方向重复
+                    repeat-y 沿着y轴方向重复
+                    no-repeat 背景图片不重复
+            
+            */
+
+            background-repeat: no-repeat;
+
+            /* 
+            background-position 用来设置背景图片的位置
+                设置方式
+                    通过top left right bottom center 几个表示范围的词来设置位置
+                        使用方位词时，必须要同时指定两个值，如果只写一个则第二个默认就是center
+
+                    通过偏移量来制定背景图拍你的位置：
+                        水平方向的偏移量
+                        垂直方向的偏移量
+            */
+
+            /* background-position: right bottom; */
+            background-position: 10px 10px;
+
+            /* 
+            设置背景的范围
+                background-clip
+                    可选值：
+                        border-box 默认值，背景会出现在边框的下边
+                        padding-box 背景不会出现在边框，只出现在内容区和内边距
+                        content-box 背景只会出现在内容区
+                background-origin 背景图片的偏移量计算的原点
+                        padding-box 默认值，background-position从内边距开始计算
+                        content-box 背景图片的偏移量从内容区处计算
+                        border-box 背景图片的偏移量从边框处开始计算
+            */
+
+            
+
+            /* background-origin: border-box;
+            background-clip: border-box; */
+
+            /* 
+            background-size 设置背景图片的大小
+                第一个值表示高度
+                第二个值表示宽度
+                    如果只写一个，则第二个值默认是auto
+                    如果写100%，
+
+                cover 图片比例不变，将元素铺满
+                contain 图片比例不变，将图片在元素中完整显示
+
+            */
+            background-size: 200px 200px;
+
+            /* border: green 10px double; */
+            overflow: auto;
+        }
+
+        .box2{
+            width: 100px;
+            height: 600px;
+            background-color: orange;
+            background-image: url("../img/q.jpg");
+            background-repeat: no-repeat;
+
+            /* background-attachment
+                - 背景图片是否跟随元素移动
+                - 可选值
+                    scroll 默认值 背景图片跟随元素移动
+                    fixed 背景会固定在页面中，不会随元素移动
+             */
+
+            background-attachment: fixed;
+
+
+            /* 
+            总结
+                background-color
+                background-image
+                background-repeat
+                background-position
+                background-size
+                background-origin
+                background-clip
+                background-attachment
+
+                - background 背景相关的简写属性，所有背景相关的样式都可以通过该样式来设置
+                    简写属性各值基本没有顺序要求，并且没有哪个属性时必须写的
+                        1，background-size必须跟在background-position后使用/隔开
+                        2，background-origin必须在background-clip前面
+            */
+        }
+
+        .box3{
+            width: 300px;
+            height: 300px;
+
+            /* 
+            简写属性各值基本没有顺序要求
+            1，background-size必须跟在position后使用/隔开
+            2，origin必须在clip前面
+
+
+            */
+            background: blue url("../img/b.jpg") center center/contain border-box content-box no-repeat;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="box2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, repudiandae. Eius nihil mollitia modi sit quisquam illum, minus esse facere nam, dolor fugit voluptatum iure inventore. Iure odio porro exercitationem!
+        </div>
+    </div>
+
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        运算符也叫操作符
+           通过运算符可以对一个或多个值进行运算，并获取运算结果
+           比如： typeof就是运算符，可以来获得一个值的类型
+                它会将该值的类型以字符串的形式返回
+                number string Boolean undefined object
+           算数运算符
+                当对非number类型的值进行运算时，会将这些值转换为Number再进行运算
+                  任何值和NaN进行运算，得数都是NaN
+
+                 +  可以对两个值进行减法运算，并将结果返回
+                    如果对两个字符串进行加法运算，则会拼串操作
+                        ——将两个字符串拼接为一个字符串
+                    任何的值和字符串做加法运算，都会先转换为字符串，再进行拼串操作
+                 -
+                    可以对两个值进行加法运算，并将结果返回  
+                 *
+                    可以复两个值进行乘法运算
+                 /
+                    可以对两个值进行除法运算
+                 %
+                    取模运算（取余数）
+        
+                */
+        var a = 123;
+
+        var result = typeof a;
+
+        console.log(result);
+        console.log(typeof result);
+        console.log(typeof a);
+
+        result = a + 1;
+        console.log(result);
+
+        result = true + 1;
+        console.log(result);
+
+        result = 2 + null;
+        console.log(result);
+
+        result = 2 + NaN;
+        console.log(result);
+
+        result = "你好" + "美女！";
+        console.log(result);
+
+        result = true + "hello";
+        console.log(result);
+        //任何值和字符串相加都会转换为字符串，并做拼串操作
+        /*
+        我们可以利用这一特点，来将一个任意的数据类型转换为String
+           我们只需要为任意的数据类型+一个“”即可将其转换为String
+           这是一种隐式的类型转换，由浏览器自动完成，实际上也是调用了String函数
+        */
+        var c = 123;
+        c = c + "";
+        console.log("c = "+c);
+        console.log(typeof c);
+
+        //result = 1 + 2 + "3";
+        //result = "1" + 2 + 3;
+
+        /*任何值做- * /运算时，都会自动转换成Number
+              我们可以利用这一特点做隐式的类型转换
+                  可以通过为一个值-0，*1 /1来将其转换为Number
+                  原理和Number()函数一样，使用起来简单
+        */
+        result = 100 - "1";
+        console.log(result);
+
+        result = 2 * "8";
+        console.log(result);
+
+        result = 2 * undefined;
+        console.log(result);
+
+        result = 2 * null;
+        console.log(result);
+        
+
+        result = 9 % 3;
+        console.log(result);
+
+        result = 9 % 4;
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

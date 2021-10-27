@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        
+        *通过程序，在页面中输出如下图形：
+
+        *
+        **
+        ***
+        ****
+        *****
+        
+         */
+
+         
+         
+         var i = prompt ("您想画几行星星？");
+
+         //通过一个for循环来输出图形
+         //这个for循环执行几次，图形的高度就是多少
+         //它可以用来控制图形的高度
+         for(var n = 0 ; n < i ; n++){
+             /*
+              *在循环的内部再创建一个循环用来控制图形的宽度
+              *目前我们的外部的for循环执行1次，内部的执行就会执行n次
+              * 
+              *内存循环可以决定图形的宽度，它执行几次，宽度就是多少
+              */
+             for(var m = 0; m < n + 1 ; m++){
+                 document.write("*&nbsp;");
+                }
+            document.write("<br/>");
+         }
+
+         /*
+
+          *****
+          ****
+          ***
+          **
+          * 
+          
+
+          */
+
+         for(var j = 0 ; j < i ; j++){
+             /*
+              *
+              */
+             for(var k = 0; k < i - j ; k++){
+                 document.write("*&nbsp;");
+                }
+            document.write("<br/>");
+         }
+
+
+
+
+         for(var a = 1 ; a <= 9 ; a++){
+             /*
+              *
+              */
+             for(var b = 1; b <= a ; b++){
+                 var c = a * b;
+                 document.write("<span>"+a+"x"+b+"="+c+"</span>");
+                }
+            document.write("<br/>");
+         }
+
+    </script>
+    <style type = "text/css">
+
+        span{
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

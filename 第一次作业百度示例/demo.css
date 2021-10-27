@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    font-family: arial; 
+}
+/* 设置header底部的细横线 */
+hr {
+    border-width: 1px 0 0 ;
+    border-color: rgba(0,0,0,.1);
+}
+body {
+    overflow-y: scroll;  /* 让页面有默认的滚动条 */
+    min-height: 100%;   /* 12-14行与16-22都是为了在不用position的情况下使页面底部的那块footer始终居于页面底部，强烈建议使用position来完成这步工作 */
+    display: flex;
+    flex-direction: column;
+}
+#content {
+    flex: 1;
+    min-height: 450px;
+}
+html {
+    height: 100%;
+}
+#header {
+    height: 32px;
+    min-width: 1000px; /* 设置min-width是为了防止页面放过大时父元素宽度不够导致 header-left与header-right显示bug*/
+}
+.header-left {
+    height: 32px;
+    margin-left: 15px;
+    float: left;    /*  header-left左浮动 */
+    display: flex;
+    align-items: center;
+}
+#header span {
+    font-size: 12px;
+    margin-right: 7px;
+    color:rgb(85, 85, 85);
+}
+#header img {
+    margin: 0 5px 0 5px;
+}
+.header-left a {
+    margin-right: 19px;
+    font-size: 12px;
+    color: rgb(93, 89, 89);
+}
+
+.header-right {
+    height: 32px;
+    float: right;  /* header-right右浮动 */
+    display: flex;
+    align-items: center;
+}
+.header-right a {
+    color: #555;
+    font-size: 13px;
+    margin-left: 19px;
+    font-weight: 700;
+}
+.setting {
+    display: block; /* 由于这块只用了一个a标签 所以为了能设置宽高得手动将其转换成块级元素，也可以用a标签内套一个块级元素解决 */
+    margin: 0;
+    width: 86px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #398bfb;
+}
+
+.logo {
+    width: 640px;  /* 为了使用margin:0 auto来居中所以得设置宽度 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    margin-top: 72px;
+    margin-bottom: 19px;
+}
+.search {
+    width: 640px;
+    height: 40px;
+    margin: 0 auto;
+}
+input {
+    width: 480px;
+    height: 20px;
+    padding: 9px 48px 9px 7px;
+    border-width: 1px ;
+    border-color: rgba(0,0,0,.3);          /* 92-93行为input边框设置细线 */
+    border-bottom-color: rgba(0,0,0,.2);
+    float: left;
+}
+.camera {
+    float: left;
+    margin-left: -30px;
+    margin-top: 12px;
+    width: 18px;
+    height: 16px;
+    background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png); 
+    cursor: pointer; /* 设置鼠标移上时变成手指样式 */
+}
+/* 设置鼠标移上后切换背景图显示的区域来模拟变色效果 */
+.camera:hover {
+    background-position: 0 -20px; 
+}
+button {
+    float: left;
+    width: 102px;
+    height: 40px;
+    background-color: #3388FF;
+    color: white;
+    border: 0 transparent;   /* 设置无边框 */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#footer {
+    height: 40px;
+    margin-bottom: 12px;
+}
+.footer-info {
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+}
+.footer-info a {
+    text-align: center;
+    font-size: 12px;
+    color: #999999;
+}

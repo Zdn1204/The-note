@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+
+
+        .picture{
+            width: 590px;
+            height: 470px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        /* .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }  专门解决因浮动而产生的高度塌陷问题*/
+
+        li{
+
+            width: 590px;
+            height: 470px;
+            position: absolute;
+            /* left: 10px;
+            没设置偏移量，暂时维持原位置，只是偏移量的依据是包含块
+            */
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        } 
+
+        .circle{
+            position:absolute;
+            bottom: 10px;
+        }
+
+        .circle>span{
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(194, 186, 186, 0.6);
+            border: rgb(247, 243, 243,0) 3px solid;
+            /* 背景颜色只设置到内容区，边框和内边距不再有背景颜色*/
+            background-clip: content-box;
+            margin-left: 5px;
+        }
+
+        .circle>span:hover{
+            border: rgba(194, 186, 186, 0.6) 3px solid;
+            background-color: rgba(255, 255, 255, 0.795);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <ul class="picture">
+        <li  class="y"><a href=""><img src="../img/05/y.jpg" alt=""></a></li>
+        <li  class="e"><a href=""><img src="../img/05/e.jpg" alt=""></a></li>
+        <li  class="san"><a href=""> <img src="../img/05/san.jpg" alt=""></a></li>
+        <li  class="s"><a href=""><img src="../img/05/s.jpg" alt=""></a></li>
+        <li  class="w"><a href=""><img src="../img/05/w.jpg" alt=""></a></li>
+        <li  class="l"><a href=""><img src="../img/05/l.jpg" alt=""></a></li>
+        <li  class="q"> <a href=""><img src="../img/05/q.jpg" alt=""></a></li>
+        <li  class="b"><a href=""><img src="../img/05/b.jpg" alt=""></a></li>
+
+        <div class="circle">
+            <span class="y"></span>
+            <span class="e"></span>
+            <span class="san"></span>
+            <span class="s"></span>
+            <span class="w"></span>
+            <span class="l"></span>
+            <span class="q"></span>
+            <span class="b"></span>
+        </div>
+        
+    </ul>
+   
+</body>
+</html>

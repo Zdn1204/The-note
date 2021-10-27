@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fa/css/all.css">
+    <style>
+    
+    .top{
+        min-width: 1226px;
+        height: 40px;
+        background-color: #333333;
+    }
+
+    .top-container{
+        width: 1226px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .nav-left{
+        float: left;
+    }
+    .nav-right{
+        float: right;
+    }
+
+    li{
+        float:left;
+        line-height:40px;
+    }
+
+    .shopping{
+        position: relative;
+    }
+
+    .hiddenbox{
+        min-height: 60px;
+        width: 316px;
+        padding-top: 20px;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background-color:#fff;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .3);  
+    }
+
+    a:link{
+        text-decoration: none;
+        color:#b0b0b0 ;
+        font-size: 12px;
+    }
+
+    a:hover{
+        color:#fff;
+    }
+
+    span.line{
+        color: #3e3e3e;
+        margin: 0 8px;
+    }
+
+    .shoppingcart{
+        padding: 0 20px;
+        background-color: #424242;
+        margin-left: 20px;
+    }
+
+    .shopping:hover .shoppingcart{
+        background-color: #fff;
+        color:#ff6700;
+    }
+
+    .shopping:hover .hiddenbox{
+        display: block;
+
+    }
+
+    .header{
+    min-width: 1226px;
+    height: 100px;
+    }
+
+    .header-container{
+        width: 1226px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+
+    .bg-logo{
+        margin: 0 auto;
+        width: 56px;
+        height: 56px;
+        margin-top: 22px;
+        background-image: url("../img/logo-mi2.png");
+        background-repeat: no-repeat;
+        background-size: 56px 56px;
+        background-position: left center;
+    }
+
+    .bg-logo, .header-list, .searchbox{
+        float: left;
+    }
+
+    .header-list{
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .header-list li{
+        line-height: 100px;
+        
+    }
+
+    .header-list li span{
+        font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-container">
+            <ul class="nav-left">
+                <a href="javascript:;">
+                    <li>
+                        小米商城
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        MIUI
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        loT
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        云服务
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        天性数科
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        有品
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        小爱开放平台
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        企业团购
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        资质证照
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        协议规则
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        下载app
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        智能生活
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        Select Location
+                    </li>
+                </a>
+            </ul>
+            <ul class="nav-right">
+                <a href="javascript:;">
+                    <li>
+                        登录
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        注册
+                    </li>
+                </a>
+                <li><span class="line">|</span></li>
+                <a href="javascript:;">
+                    <li>
+                        消息通知
+                    </li>
+                </a>
+                <a href="javascript:;">
+                    <li class="shopping">
+                        <div class="shoppingcart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>购物车 (0)</span>
+                        </div>
+                        <div class="hiddenbox">
+                            <span>购物车中还没有商品，赶紧选购吧！</span>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="header-container">
+            <a href="javascript:;">
+                <div class="bg-logo">
+                </div>
+            </a>
+
+            <div class="header-list">
+                <ul>
+                    <li>
+                        <a href="javascript:;"><span>小米手机</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>Redmi 红米</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>电视</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>笔记本</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>家电</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>路由器</span></a>
+                        <div></div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span>智能硬件</span></a>
+                        <div></div>
+                    </li>
+                    <li><a href="javascript:;"><span>服务</span></a></li>
+                    <li><a href="javascript:;"><span>社区</span></a></li>
+                </ul> 
+            </div>
+
+            <div class="search-box">
+                <input type="text"><i class="fas fa-search"></i>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="main">
+        <ul class="left-category-list">
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <i></i>
+                </div>
+                <div>
+                    
+                </div>
+            </li>
+        </ul>
+        
+        <div class="big-image"></div>
+    </div>
+</body>
+</html>

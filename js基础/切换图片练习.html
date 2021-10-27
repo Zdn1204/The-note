@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function(){
+
+            /* 
+            使图片可以自动切换
+             */
+
+            var img1 = document.getElementById("img1");
+
+            var imgArr = ["./img/img_change/1.jpg","./img/img_change/2.jpg","./img/img_change/3.jpg","./img/img_change/4.jpg","./img/img_change/5.jpg"];
+
+            // 创建一个变量来保存当前图片的索引
+            var index = 0;
+            var timer;
+            /* 
+            开启一个定时器来自动切换图片
+             */
+
+             timer = setInterval(function(){
+                    // 使索引自增
+                    index++;
+    
+                    if(index>=imgArr.length){
+                        index = 0;
+                    }
+                    img1.src = imgArr[index];
+                },1000);
+
+            img1.onmouseout = function(){
+                // timer = setInterval(function(){
+                //     // 使索引自增
+                //     index++;
+    
+                //     if(index>=imgArr.length){
+                //         index = 0;
+                //     }
+                //     img1.src = imgArr[index];
+                // },1000);
+
+            }
+
+
+            img1.onmouseover = function(){
+                clearInterval(timer);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <img src="./img/img_change/1.jpg" alt="" id="img1">
+</body>
+</html>

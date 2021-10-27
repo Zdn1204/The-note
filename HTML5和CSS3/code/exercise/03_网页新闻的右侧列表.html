@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+
+        a{
+            text-decoration: none;
+        }
+
+        a:link{
+            color: #404040;
+        }
+
+
+        a:visited{
+            color: #404040;
+        }
+
+        a:hover{
+            color: red;
+        }
+
+        .news-right{
+            width: 300px;
+            height: 324px;
+            margin: 35px;
+            border-top: #dddddd 1px solid;
+            
+        }
+        
+        .title{
+            
+            height: 40px;
+            line-height: 40px;
+            
+            
+        }
+
+        h2{
+            border-top: #f34540 1px solid;
+            /* float: left; */
+            /* 为了边框和文字一致，需要将h转换为行内块元素 */
+            display: inline-block;
+            /* 通过margin-top使h2上移，盖住上边边框 */
+            margin-top: -1px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #404040;
+        } 
+
+        .picture{
+            height: 150px;
+        }
+
+        h3{
+            margin-top: -30px;
+            padding-left: 25px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+
+        ul{
+            margin-top: 12px;  
+            
+            
+        }
+
+        
+        li{
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            color: rgb(221, 221, 221);
+            
+        }
+
+        li::before{
+            content: '■';
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="news-right">
+
+        <div class="title">
+            <h2>
+                <a href="">军事</a><span>·</span><a href="">航空</a>
+            </h2>
+        </div>
+
+        <div class="picture">
+            <a href="">
+                <img src="../img/03/3.1.webp" alt="" style="width: 300px;">
+                <h3>俄s500导弹发射瞬间：场面暴力</h3>
+                
+            </a>
+        </div>
+
+
+        <ul>
+            <li><a href="">翼龙无人机飞赴河南灾区为民众恢复移动网络</a></li>
+            <li><a href="">俄新五代机驾驶舱公开：侧面仪表盘老旧</a></li>
+            <li><a href="">中国卫星镜头中的河南暴雨洪灾前后对比</a></li>
+            <li><a href="">河南罕见大暴雨，翼龙无人机紧急出动</a></li>
+        </ul>
+
+    </div>
+    
+</body>
+</html>

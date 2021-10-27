@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+
+            /*
+            可以将js代码写到script标签中，标签位于在<head>内
+            */
+
+            alert("helloworld!");
+            //弹窗
+            console.log("helloworld");
+            //控制台可见，用户不可见
+            document.write("helloword");
+            //在“body”中写入一个helloworld
+            /*
+            从上到下，一行一行执行
+            */
+           
+        </script>
+        <script src="js基础1.0.js"></script>
+        <!--
+            可以将js代码编写到外部的js文件中，然后通过script标签引入，
+            写到外部文件中可以在不同的页面中同时应用利用到浏览器的缓存机制
+            推荐使用
+            用来引入外部js文件的这个script标签不能再在内部编写代码，写了也会被浏览器忽略
+        -->
+    </head>
+    <body>
+
+       <button onclick="alert('点我干嘛')">点我一下</button> 
+       <!--可以将js代码编写到标签的onclick属性当中-->
+
+       <a href="javascript:alert('你猜接下来会发生什么')">有本事点我一下</a>
+       <!--可以将js代码写在超链接的href属性中-->
+       <!--虽然js代码可以写在标签的属性当中，当时结构和行为耦合，不方便后续的维护，不推荐使用-->
+
+    </body>
+    </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: blanchedalmond;
+
+            position: relative;
+        }
+
+        .box2{
+            width: 100px;
+            /* 
+            width: auto; 
+                若不设置left right值，width的auto不起效果，
+                    因为绝对定位脱离文档流，宽度应该被内容撑开，
+            
+            */
+            height: 100px;
+            background-color: burlywood;
+            margin: auto;
+            /* 实现水平、垂直双居中 */
+
+            /* 
+            水平布局
+                left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 包含块内容区宽度
+            
+            - 当我们开启了据对定位后：
+                水平方向的布局等式就需要添加left 和right两个值
+                    此时规则和之前一样，只是多添加了两个值
+                        当发生过度约束：
+                            如果9个值中没有auto 则自动调整right值以使等式满足（不调margin-right了）
+                            如果有auto 则自动调整auto的值以使等式满足
+
+                    - 可设置的auto的值
+                        left right margin width
+
+                    - left 和 right 的值默认为auto，所以如果不知道left和right
+                        则等式不满足时，会自动调整这两个值
+
+
+                垂直方向布局的等式也必须要满足
+                    top/bottom + margin-top/bottom + padding-top/bottom + border-top/bottom +height
+            */
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

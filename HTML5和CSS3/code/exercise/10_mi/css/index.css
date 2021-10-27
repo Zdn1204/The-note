@@ -1,0 +1,404 @@
+/* 主页index.html的样式表 */
+
+/* 顶部导航条的容器 */
+.top-bar-wrapper{
+    /* 设置宽度全屏 */
+    width: 100%;
+    /* 设置高度和行高 */
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+/* 设置超链接的颜色 */
+.top-bar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    /* a里有文字，文字行高设置为40,所以a在变成block后高度被撑开了 */
+    display: block;
+}
+
+/* 设置超链接移入的效果 */
+.top-bar a:hover{
+    color: white;
+}
+
+/* 设置中间的分隔线 */
+.top-bar .line{
+    font-size: 12px;
+    color: #424242;
+    margin: auto 8px;
+}
+
+/* 设置左侧导航栏 */
+.service, .top-bar li{
+    float: left;
+}
+
+.app{
+    position: relative;
+}
+
+/* 设置qpp下的小三角 */
+    .app::after{
+    display: none;
+    content: '';
+    /* 必须设置宽高，不然设置绝对定位后移动，大小会自动填充 */
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    border-bottom-color:white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 设置下载app的下拉 */
+.app .qrcode{
+    /* display: none; */
+    position: absolute;
+    left: -38px;
+    width: 124px;
+
+    height: 0;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    line-height: 1;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    z-index: 999;
+    /* transition: 用于为样式设置过渡效果 */
+    transition: height 0.3s;
+}
+
+/* 伪元素不能当作子元素 */
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+
+/* 设置二维码文字 */
+.app .qrcode span{
+    color: #000;
+    font-size: 14px;
+}
+
+.shop-cart, .user-info{
+    float: right;
+}
+
+.shop-cart{
+    position: relative;
+    margin-left: 26px;
+}
+
+/* 设置购物车的样式 */
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.shop-cart i{
+    margin-right: 2px;
+}
+
+.shop-cart-box{
+    position: absolute;
+    top: 40px;
+    left: -195px;
+    width: 316px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 12px;
+    height: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    transition: height 0.3s;
+    z-index: 999;
+}
+
+.shop-cart:hover a{
+    background-color: white;
+    color: #ff6700;
+}
+
+.shop-cart:hover .shop-cart-box{
+    height: 100px;
+}
+
+.shop-cart:hover li{
+    position: relative;
+    z-index: 999;
+}
+
+.header-wrapper{
+    width: 100%;
+    position: relative;
+}
+
+/* 设置中间的header */
+.header{
+    height: 100px;
+    min-width: 1226px;
+    margin: 0 auto;
+}
+
+.header .logo{
+    position: relative;
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-top: 22.5px;
+    /* 隐藏logo中的文字 */
+    text-indent: -9999px;
+}
+
+.header .logo a{
+    position: absolute;   
+    top: 0;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-image: url("../img/logo-mi2.png");
+    background-size: cover;
+}
+
+.header .nav-wrapper{
+    float: left;
+    width: 850px;
+}
+
+.header .nav{
+    height: 100px;
+    line-height: 100px;
+    padding-left: 65px;
+}
+
+.nav-wrapper li{
+    float: left;
+    /* line-height: 100px; */
+}
+
+.nav-wrapper li a{
+    /* display: block; */
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+
+.all-goods{
+    visibility: hidden;
+}
+
+.nav .goods-info{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 999;
+    /* border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 3px 3px rgba(0,0,0,.2); */
+    transition: height 0.3s;
+}
+
+/* .nav li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(11)):hover ~ .goods-info, */
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    background-color: #ffffff;
+    border-top: 1px solid rgb(224,224,224);
+    box-shadow: 0 3px 3px rgba(0,0,0,.2); 
+}
+
+/* 设置搜索框的容器 */
+.search-wrapper{
+    position: relative;
+    float: right;
+    margin-top: 25px;
+    /* background-color: red; */
+    
+}
+
+.search-wrapper .search{ 
+    width: 296px;
+    height: 50px;
+}
+
+.search-wrapper .search-inp{
+    float: left;
+    padding: 0 10px;
+    height: 48px;
+    width: 221px;
+    border: 1px solid rgb(224,224,224);
+    outline: none;
+}
+
+.search-wrapper .search-btn{
+    float: left;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    box-sizing: content-box;
+    border: 1px solid rgb(224,224,224);
+    border-left: none;
+    background-color: white;
+    color: #616161;
+    font-size: 18px;
+}
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus +.search-btn{
+    border-color:  #ff6700 ;
+}
+
+
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: #ffffff;
+}
+
+.search-wrapper .search-choices{
+    position: absolute;
+    display: none;
+    width: 241px;
+    height: 240px;
+    background-color: white;
+    border: 1px #ff6700 solid;
+    border-top: none;
+    z-index: 999;
+    top: 50px;
+}
+
+.search-wrapper .search-inp:focus ~.search-choices{
+    display: block;
+}
+
+
+.main-wrapper{
+    position: relative;
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+.main-wrapper .left-nav-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.main-wrapper .left-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 420px;
+    background-color: rgba(0,0,0,.4);
+    padding: 20px 0;
+}
+
+.main-wrapper .left-nav-wrapper .goods-details{
+    position: absolute;
+    top: 0;
+    left: 234px;
+    display: none;
+    width: 900px;
+    height: 460px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    border: 1px solid #d8d6d6;
+}
+
+.main-wrapper li{
+    width: 204px;
+    line-height: 42px;
+    padding-left: 30px;
+}
+
+.main-wrapper li a{
+    font-size: 16px;
+    color: white;
+}
+
+.main-wrapper li .fas{
+    float: right;
+    line-height: 42px;
+    margin-right: 25px;
+    font-size: 16px;
+    color: white;
+    
+}
+
+
+.main-wrapper li:hover{
+    background-color: #ff6700;
+}
+.main-wrapper li:hover ~.goods-details{
+    display: block;
+}
+
+.main-wrapper .main-big-img{
+    position: relative;
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+
+.main-wrapper .main-big-img li{
+    position: absolute;
+    width: 1226px;
+    height: 460px;
+    padding: 0;
+}
+
+.main-wrapper .main-big-img img{
+    width: 1226px;
+    height: 460px;
+}
+
+.circle{
+    position:absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.circle>span{
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(194, 186, 186, 0.6);
+    border: rgb(247, 243, 243,0) 3px solid;
+    /* 背景颜色只设置到内容区，边框和内边距不再有背景颜色*/
+    background-clip: content-box;
+    margin-left: 5px;
+}
+
+.circle>span:hover{
+    border: rgba(194, 186, 186, 0.6) 3px solid;
+    background-color: rgba(255, 255, 255, 0.795);
+}

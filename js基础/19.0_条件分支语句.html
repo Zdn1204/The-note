@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        条件分支语句也叫switch语句
+        语法：
+            switch(条件表达式){
+                case 表达式:
+                    语句...
+                    break;
+                case 表达式:
+                    语句...
+                    break;
+                case 表达式:
+                    语句...
+                    break;
+                case 表达式:
+                    语句...
+                    break;
+                default:
+                    语句...
+                    break;
+            }
+        执行流程：
+            switch...case...语句
+            在执行时会依次将case后的表达式的值和switch后的条件表达式进行全等比较
+                如果比较结果为true，则从当前case处开始执行代码
+                    当前case后的所有的代码都会执行，可以在case后面跟着一个break
+                    这样可以确保只会执行当前case后的语句，而不会执行其它的case
+                如果比较结果为false,则继续向下比较
+                如果所有的比较结果都为false，则只执行defau后的语句
+        switch语句和if语句的功能实际上有重复的，使用switch可以实现if的功能，
+            同样使用if也可以实现swi的功能，所以我们使用时，可以根据自己的习惯选择
+        */
+
+        //根据num的值，输出对应的中文
+        var num = 1;
+        switch(num){
+            case 1:
+                console.log("壹");
+                //使用break可以来推出switch语句
+                break;
+            case 2:
+                console.log("贰");
+                break;
+            case 3:
+                console.log("叁");
+                break;
+            default:
+                console.log("非法数字");
+                break;
+        }
+    </script>
+    <script>
+        /*
+        switch练习：
+        对于成绩大于60分的，输出‘合格’，低于60分的，输出‘不合格’
+
+        6x / 10 = 6
+        7x / 10 = 7
+        8x / 10 = 8
+        9x / 10 = 9
+        100
+
+        */
+
+        var score = prompt("请输入分数：");
+
+        /*
+        switch(parseInt(score/10)){
+            case 10:
+            case 9:
+            case 8:
+            case 7:
+            case 6:
+                console.log("合格");
+                break;
+            default:
+                console.log("不合格");
+                break;
+        }*/
+
+        switch(true){
+            /*case后的表达式返回为true，与switch后全等，则执行后面的语句
+                  返回为false，则执行default后语句
+            */
+            case score >= 60:
+                console.log("合格");
+                break;
+            default:
+                console.log("不合格");
+                break;  
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

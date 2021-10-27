@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 设置表的样式 */
+        .clock{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 50%;
+            /* border: 20px solid black; */
+            position: relative;
+
+            background-image: url("../img/13/bg3.jpg");
+            background-size: cover;
+        }
+
+        /* 设置时针 */
+        .hour-wrapper{
+            position: absolute;
+            height: 40%;
+            width: 40%;
+            animation: hour-run 43200s infinite linear;
+        }
+
+        .hour{
+            height: 50%;
+            width: 10px;
+            border: 2px red solid;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .min-wrapper{
+            height: 65%;
+            width: 65%;
+            position: absolute;
+            animation: min-run 3600s infinite linear;
+        }
+
+        .min{
+            height: 50%;
+            width: 4px;
+            border: 2px red solid;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .sec-wrapper{
+            height: 80%;
+            width: 80%;
+            position: absolute;
+            animation: sec-run 60s steps(60) infinite;
+        }
+
+        .sec{
+            height: 50%;
+            width: 2px;
+            background-color: red;
+            border: 2px black solid;
+            margin: 0 auto;
+        }
+
+        .point{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            border: black 3px solid;
+        }
+
+        @keyframes sec-run{
+            form{
+                transform: rotateZ(0);
+            }
+
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes min-run{
+            form{
+                transform: rotateZ(0);
+            }
+
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes hour-run{
+            form{
+                transform: rotateZ(0);
+            }
+
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        
+        .clock>div{
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="clock">
+       <div class="hour-wrapper">
+           <div class="hour"></div>
+       </div>
+       
+       <div class="min-wrapper">
+           <div class="min"></div>
+       </div>
+
+        <div class="sec-wrapper">
+            <div class="sec"></div>
+        </div>
+
+       <div class="point"></div>
+   </div>
+</body>
+</html>

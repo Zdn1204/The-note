@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        table{
+            border-bottom: rgb(163, 159, 159) solid 1px;
+        }
+        td{
+            padding-left: 50px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        span{
+            padding-right: 10px;
+        }
+
+        input{
+            height: 25px;
+            width: 225px;
+            border: 1px solid rgb(128, 128, 128);
+            border-radius: 4px;
+        }
+
+        input::-webkit-input-placeholder{/*Webkit browsers*/
+            color:#999;
+            font-size:12px;
+            padding-left:5px;
+            }
+        input:-moz-placeholder{/*Mozilla Firefox 4 to 8*/
+            color:#999;
+            font-size:12px;
+            padding-left:5px;
+            }
+        input::moz-placeholder{/*Mozilla Firefox 19+*/
+            color:#999;
+            font-size:12px;
+            padding-left:5px;
+            }
+        input:-ms-input-placeholder{/*Internet Explorer 10+*/
+                color:#999;
+                font-size:12px;
+                padding-left:5px;
+            }
+
+        button{
+            height: 25px;
+            width: 60px;
+            margin-left: 15px;
+            border: 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h4>商品提货</h4>
+        <table>
+            <tr>
+                <td><span>提货单号</span> <input type="text" placeholder="请输入单号"></td>
+                <td><span>商品名称</span> <input type="text" placeholder="请输入名称"></td>
+            </tr>
+            <tr>
+                <td><span>商家名称</span> <input type="text" placeholder="请输入商家"></td>
+                <td><span>交货日期</span> <input type="text" placeholder="开始日期 - 结束日期"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <button style="background-color: rgb(95, 95, 230);">查询</button>  <button>清空</button>
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* function Phone(){
+
+        }
+
+        Phone.name = 'shouji';
+        Phone.change = function(){
+            console.log('我可以改变世界');
+        }
+
+        let nokia = new Phone();
+
+        // 这样的属性和方法不属于实例，属于构造函数对象
+        console.log(nokia.name);
+        console.log(nokia.change); */
+
+        class Phone{
+
+            constructor(){
+
+            }
+
+            static name = 'shouji';
+            static change(){
+                console.log('我可以改变世界');
+            }
+        }
+
+        let onePlus = new Phone();
+
+        // 在class中，static标识属性同样是静态的，属于类，不属于实例
+        console.log(onePlus.name);
+        console.log(onePlus.change());
+    </script>
+</body>
+</html>

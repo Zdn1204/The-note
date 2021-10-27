@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+    
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+
+            /* 
+            浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围
+                所以我们可以利用浮动来设置文字环绕图片的效果
+            */
+            float: left;
+        }
+
+        .box2{
+            background-color: rgb(214, 185, 110);
+
+            float: left;
+
+            /* 
+            元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会发生改变
+            
+            脱离文档流的特点
+                块元素
+                    1，块元素不再独占一行
+                    2，脱离文档流以后块元素的宽度和高度都被内容撑开，不用满足那个公式
+                
+                行内元素
+                    行内元素脱离文档流以后会变成块元素，特点和块元素一样
+
+                脱离文档流以后，不需要再区分块和行内了
+            */
+        }
+
+        .box3{
+            background-color: darkseagreen;
+        }
+
+        .s1{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 
+    <div class="box1"></div>
+    <p>
+        其实作为一名电竞选手，隔着一条网线一方屏幕，根本无法衡量出这个人除了操作水平、经验、意识这些与游戏内容挂钩之外的任何东西，但是不知怎么回事，周泽楷就是认定了叶秋一定长得不难看。
+    　　他和大部分荣耀玩家一样，视线都盯着职业圈那些顶尖大神，崇拜一叶之秋，仰慕荣耀大神叶秋，但是关注的方方面面却有些奇怪。
+    　　开始正式为轮回效力后，他加入了那个全是职业圈大神出没的Q群，围观大神们谈笑，他不是一个八卦的人，却总是期待从这个群的聊天记录里挖到一些有关叶秋的内容。
+    　　想知道他平时有什么爱好啊、喜欢和别人聊什么、有没有特别偏好的食物……等等等等。
+    　　叶秋虽然对外一直很低调神秘，但是和熟络的人聊起来却是只会秀下限，黄少天能给叶秋一句话堵的手速狂飙刷屏几十页，下边一排附和的捶桌笑，周泽楷嘴角勾起，顺手也排了一个表情下来，很快隐没在人堆里，要往上翻好几页才能看见。
+    　　大家七嘴八舌的聊荣耀聊联赛聊八卦，叶秋插了一句轻飘飘的话很快就被刷了上去，却像扔了一颗深水炸弹，一下炸开周泽楷的心。
+    　　哟，轮回的周泽楷也在群里啊？这个赛季打得真不错啊
+    </p> -->
+
+    <div class="box2">hello</div>
+
+    <!-- <div class="box3">kitty</div> -->
+
+    <span class="s1">唐老鸭</span>
+</body>
+</html>

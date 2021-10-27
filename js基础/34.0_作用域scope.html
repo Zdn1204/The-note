@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        作用域
+            - 作用域指一个变量的作用的范围
+            - 在JS中一共有两种作用域
+                1，全局作用域
+                    - 直接编写在script标签中的JS代码，都在全局作用域中
+                    - 全局作用域在页面打开时创建，在页面关闭时销毁
+                    - 在全局作用域中，有一个全局对象window，
+                        它代表的是一个浏览器的窗口，它由浏览器创建，我们可以直接使用
+                    - 在全局作用域中
+                        创建的变量都会作为window对象的属性保存
+                        创建的函数都会作为window对象的方法保存
+                    - 全局作用域中的变量都是全局变量
+                        在页面的任意部分都可以访问到
+                2，函数作用域（局部作用域）
+        */
+
+        var a = 10;
+        var b = "hello";
+
+        console.log(window.a);
+        console.log(window.b);
+
+        function fun() {
+            console.log("我是fun函数");
+        }
+        fun();
+        window.fun();
+
+        /*
+        变量的声明提前
+            - 使用var关键字声明的变量，会在所有的代码执行之前被声明（但是不会赋值）
+                但是，如果声明变量时不使用var关键字，则变量不会被声明提前
+
+        函数的声明提前
+            - 使用函数声明形式创建的函数function 函数(){}
+                它会在所有的代码执行之前就被创建，所以我们可以在函数声明前调用函数
+            - 使用函数表达式创建的函数，不会被声明提前，所以不能在声明前调用
+        */
+        
+        var x = 123;
+
+        console.log("a ="+x);
+
+
+        
+        fun2();//可以调用
+
+        //函数声明可以被提前创建
+        function fun2() {
+            console.log("我是一个fun2函数");
+        }
+        
+        fun3();//不可以正常调用
+        console.log(fun3);//undefined
+
+        //函数表达式不可以提前赋值
+        var fun3 = function() {
+            console.log("我是一个fun3函数");
+        };
+
+        /*
+        函数作用域
+            - 调用函数时，创建函数作用域，函数执行完毕以后，函数作用域销毁
+            - 每调用一次函数，就会创建一个新的作用域，他们之间是互相独立的
+            - 在函数作用域中可以访问到全局作用域的变量
+                在全局作用域中无法访问到函数作用域的变量
+            - 当在函数作用域操作一个变量时，它会先在自身作用域中寻找，如果有就直接使用
+                如果没有，则向上一级作用域中寻找，直到找到全局作用域
+                如果全局作用域中依然没有找到，则会报错ReferenceError
+            - 在函数中药访问全局变量可以使用window对象
+        */
+
+        //创建一个变量
+        var m = 10; 
+        function fun4() {
+
+            var m = "啊撩撩螺";
+
+            var n = 10;
+
+            console.log("m ="+ m);//m =啊撩撩螺
+            console.log("m ="+window.m);//m =10
+            
+        }
+
+        fun4();//执行完过后，函数作用域立刻销毁
+        console.log("m ="+m);//m =10
+        console.log("n ="+n);//报错，全局作用域中变量无法访问函数作用域变量
+
+        /*
+        函数在作用域也有声明提前的特性
+            使用var关键字声明的变量，会在函数中所有代码执行之前被声明
+            函数声明也会在函数中所有代码执行之前执行
+        */
+        function fun5() {
+            
+            console.log(r);
+
+            var r = 22;
+        }
+
+        fun5();//undefined
+
+
+        var h = 39;
+
+        /*
+        在函数中，不使用var声明的变量都会成为全局变量
+        */
+        function fun6() {
+            console.log("h ="+h);
+            //没有使用var，相当于全局变量window.h
+            h = 10;
+        }
+        fun6();//h =39
+
+        console.log("h ="+h);//h =10相当于又赋了一遍值
+
+        var e = 23;
+        /*
+        定义形参就相当于在函数作用域中声明了变量
+        */
+        function fun7(e) {//形参e相当于var e
+            alert(e);
+        }
+        fun7();//undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        问题：在js调用函数时，传递变量参数时，是值传递还是引用传递
+            理解一：都是值（基本值/地址值）传递
+            理解二：可能是值传递，也可能是引用传递（地址值）
+     -->
+
+    <!-- 
+        问题：JS引擎如何管理内存？
+        1，内存生命周期
+            分配小内存空间，得到它的使用权
+            存储数据，可以反复进行操作
+            释放小内存空间
+        2，释放内存
+            局部变量：函数执行完自动释放
+            对象：成为垃圾对象==>垃圾回收器回收
+     -->
+
+    <script>
+
+        var a = 3;
+        function fn(a) {
+            a = a + 1;
+        }
+        fn(a);
+        console.log(a);// 3
+
+        function fn2(obj) {
+            console.log(obj.name);
+        }
+
+        var obj = {name:'tom'};
+        fn2(obj);
+
+
+        var x = 3;
+        var obj = {};
+        obj = null;//对象释放，obj未释放
+
+        function fn3() {
+            var y = {};
+        }
+
+        fn3();//y自动释放，y所指向的对象是在后面的某时刻由垃圾回收器回收
+    </script>
+</body>
+</html>

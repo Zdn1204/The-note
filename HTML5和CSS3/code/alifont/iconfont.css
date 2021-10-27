@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2704242 */
+  src: url('iconfont.woff2?t=1627380522777') format('woff2'),
+       url('iconfont.woff?t=1627380522777') format('woff'),
+       url('iconfont.ttf?t=1627380522777') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-canpangai:before {
+  content: "\e8b5";
+}
+
+.icon-canju2:before {
+  content: "\e8b6";
+}
+
+.icon-cha:before {
+  content: "\e8b7";
+}
+
+.icon-canju1:before {
+  content: "\e8b8";
+}
+
+.icon-guo1:before {
+  content: "\e8bc";
+}
+
+.icon-kafeiji1:before {
+  content: "\e8be";
+}
+

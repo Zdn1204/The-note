@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        while(true){
+            var score = prompt("请输入小明的期末成绩");
+            if(score >= 0 && score <= 100){
+                break;
+            }
+            alert("请输入有效分数");
+        }
+
+        
+        if(score == 100){ 
+            alert("奖励一辆宝马");
+        }else if(score >= 80){
+            alert("奖励一台iPhone15s");
+        }else if(score >= 60){
+            alert("奖励一本参考书");
+        }else {
+            alert("无奖励");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城 - Redmi Note 8、小米cc9、小米MIX 3、小米电视官方网站</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fa/css/all.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- 
+        设置网站的图标（在标题栏和收藏栏）
+            - 网站图片一般都存储在网站的根目录下，名字一般叫做 favicon.ico
+     -->
+
+     <link rel="icon" href="./img/favicon.ico">
+</head>
+<body>
+    <!-- 创建顶部导航条 -->
+    <!-- 顶部导航条外部容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 创建内部容器 -->
+        <div class="top-bar w clearfix">
+            <ul class="service">
+                <li><a href="javascript:;">小米商城</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">MIUI</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">loT</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">云服务</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">天星数科</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">有品</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">小爱开放平台</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">企业团购</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">资质证照</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">协议规则</a></li>
+                <li class="line">|</li>
+                <li>
+                    <a class="app" href="javascript:;">
+                        下载app
+                        <!-- 添加一个弹出层 -->
+                        <div class="qrcode">
+                            <img src="./img/download.png" alt="">
+                            <span>小米商城APP</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">智能生活</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">Select Location</a></li>
+                
+            </ul>
+
+            <!-- 购物车 -->
+            <ul class="shop-cart">
+                <li><a href="javascript:;">
+                    <i class="fas fa-shopping-cart"></i>
+                    购物车（0）
+                </a></li>
+                <div class="shop-cart-box">
+                    <span>购物车中还没有商品，赶紧选购吧！</span>
+                </div>
+            </ul>
+
+            <!-- 用户登录注册 -->
+            <ul class="user-info">
+                <li><a href="javascript:;">登录</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">注册</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">消息通知</a></li>
+            </ul>
+
+            
+        </div>
+    </div>
+
+    <!-- 创建一个头部的外部容器 -->
+    <div class="header-wrapper">
+        <div class="header w clearfix">
+            <!-- 创建一个logo -->
+            <h1 class="logo">
+                小米官网
+                <a href="javascript:;">
+                </a>
+            </h1>
+
+            <div class="nav-wrapper">
+                <!-- 创建导航条 -->
+                <ul class="nav clearfix">
+                    <li>
+                        <a class="all-goods" href="javascript:;">全部商品分类</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">小米手机</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">Redmi 红米</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">电视</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">笔记本</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">平板</a>
+                    </li>
+                    <li class="show-goods">                
+                        <a href="javascript:;">家电</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">路由器</a>
+                    </li>
+                    <li class="show-goods">
+                        <a href="javascript:;">智能硬件</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">服务</a>
+                    </li>
+                    <li>             
+                        <a href="javascript:;">社区</a>
+                    </li>
+
+                    <!-- 一个弹出层 -->
+                    <div class="goods-info"></div>
+                </ul>
+            </div>
+
+            <!-- 创建搜索框的容器 -->
+            <div class="search-wrapper">
+                <form class="search" action="#">
+                    <input class="search-inp" type="text">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-choices"></div>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="main-wrapper">
+        <div class="left-nav-wrapper">
+            <ul class="left-nav">
+
+                <li>
+                    <a href="javascript:;">
+                        <span>手机</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>电视</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>笔记本 平板</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>家电</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>出行 穿戴</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                    <li>
+                    <a href="javascript:;">
+                        <span>智能 路由器</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>电源 配件</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+    
+                
+                <li>
+                    <a href="javascript:;">
+                        <sapn>健康 儿童</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>耳机 音箱</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="javascript:;">
+                        <span>生活 箱包</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </li>
+
+                <div class="goods-details"></div>
+            </ul>
+
+        </div>
+
+        <ul class="main-big-img">
+            <li><a href="javaxcript:;"><img src="./img/6802d8f95b0dbfc1072ab11ee6c22f42.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./img/793eebbee1dd569fe56a8aaf58f62452.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./img/bd166252b080dcab7b5f5382a921171a.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./img/dbf94965edf515c7fc5429c09b589772.png" alt=""></a></li>
+
+            <div class="circle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </ul>
+    </div>
+
+    <div class="foot-warpper">
+        <div class="other-service">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="ad1"></div>
+
+        <div class="ad2"></div>
+        
+        <div class="ad2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        创建一个Person构造函数
+            - 在Person构造函数中，为每一个对象都添加了一个sayName方法
+                目前我们的方法是在构造函数内部创建的，
+                    也就是构造函数每执行一次就会创建一个新的sayName方法
+                也是所有实例的sayName都是唯一的
+                这样就导致了构造函数执行一次就会创建一个新的方法
+                而每次创建的方法都是一样的，这是完全没有必要的
+                可以使所有的对象共享同一个方法
+        */ 
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+
+            this.sayName = fun;//这里的fun是指函数对象，而非引用函数
+            /*
+            fun:函数对象本身类似于fun = function(){}
+            fun():执行函数代码
+            a = fun() 相当于赋值函数的运行结果，如果没有返回值，就是undefined
+            */ 
+            /*this.sayName = function(){
+                alert("hello大家好，我是"+this.name)
+            };*/
+        }
+
+        // 将sayName方法在全局作用域中定义
+        /*
+        将函数定义在全局作用域，污染了全局作用域的命名空间
+            而且定义在全局作用域中很不安全
+        */ 
+        function fun(){
+            alert("hello大家好，我是："+this.name);
+        }
+
+
+        //创建一个Person实例
+        var per = new Person("漩涡鸣人",17,"男");
+        var per2 = new Person("宇智波佐助",17,"男");
+
+        per.sayName();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

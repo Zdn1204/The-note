@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>人员列表（遍历数组）</h2>
+        <input type="text" placeholder="请输入名字" v-model='keyWord'>
+        <ul>
+            <li v-for='p of filePersons' :key='index'>
+                {{p.name}}-{{p.age}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    Vue.config.productionTip = false;
+
+    new Vue({
+       el:'#root',
+        data:{
+            keyWord:'',
+            persons:[
+                {id:'001',name:'马冬梅',age:19,sex:'女'},
+                {id:'002',name:'周冬雨',age:18,sex:'女'},
+                {id:'003',name:'周杰伦',age:21,sex:'男'},
+                {id:'003',name:'温兆伦',age:20,sex:'男'}
+            ],
+            // filePersons:[]
+        },
+
+        // watch:{
+        //     keyWord:{
+        //         immediate:true,
+        //         handler(val){
+        //             //越搜索越少
+        //             /* this.persons = this.persons.filter((p)=>{
+        //                 return p.name.indexOf(val) != -1;
+        //             }) */
+        //             this.filePersons = this.persons.filter((p)=>{
+        //                 return p.name.indexOf(val) != -1;
+        //             })
+        //         }
+        //     }
+        // }
+
+        computed:{
+            filePersons(){
+                return this.persons.filter((p)=>{
+                    return p.name.indexOf(this.keyWord) != -1;
+                })
+            }
+        }
+    })
+</script>
+</html>

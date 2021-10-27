@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 声明一个set
+        let s = new Set();
+        // 返回一个对象
+        let s2 = new Set(['daming','xioaming','Lucy','hanmeimei','xiaoming']);
+
+        // 自动去重
+        console.log(s2);
+        // 元素个数
+        console.log(s2.size);
+
+        // 遍历元素
+        for(let v of s2){
+            console.log(v);
+        }
+
+        // 添加新元素
+        s2.add('Alice');
+        console.log(s2);
+        // 删除元素
+        s2.delete('daming');
+        console.log(s2);
+        // 检测
+        console.log(s2.has('Lucy'));
+        // 清空
+        s2.clear();
+        console.log(s2);
+
+
+        </script>
+</body>
+</html>

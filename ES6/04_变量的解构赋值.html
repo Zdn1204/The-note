@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* ES6 允许按照一定模式从数组和对象中提取值，对变量进行赋值
+        这被称为解构赋值 */
+        //1，数组的结构
+        const F4 = ['言承旭','吴建豪','周渝民','朱孝天'];
+        let [yan, wu, zhou, zhu] = F4;
+        console.log(yan);
+        console.log(wu);
+        console.log(zhou);
+        console.log(zhu);
+        //2，对象的结构
+        const su = {
+            name:'苏有朋',
+            age:'忘了',
+            dianshiju:function(){
+                console.log('我会演戏和唱歌');
+            }
+        };
+
+        let {name,age,dianshuju} = su;
+    </script>
+</body>
+</html>

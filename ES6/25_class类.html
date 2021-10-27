@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* function Phone(brand,price){
+            this.brand = brand;
+            this.price = price
+        }
+
+        Phone.prototype.call = function(){
+            console.log('Good phone!');
+        }
+        
+        let Huawei = new Phone('华为',5999);
+        Huawei.call();
+        console.log(Huawei); */
+        
+        class Phone{
+            // 构造方法 名字不能修改
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price
+            }
+            
+            // 方法必须使用该语法，不能使用es5的对象完整形式
+            call(){
+                console.log('Good phone!');
+            }
+        }
+
+        let onePlus = new Phone('一加',1999);
+
+        console.log(onePlus);
+
+
+    </script>
+</body>
+</html>

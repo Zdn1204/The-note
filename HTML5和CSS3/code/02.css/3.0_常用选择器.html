@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            将所有段落设置为红色（字体）
+            
+            元素选择器
+                作用：根据标签名来选中指定的元素
+                语法：标签名{}
+                例子：p{} h1{} div{}
+         */
+
+        p{
+            color: red;
+        }
+
+        h1{
+            color: green;
+        }
+
+        /*
+        只将“而我在等你”设置为蓝色 
+
+        id选择器
+            作用：根据元素的id属性值选中一个元素
+            语法：#id属性值{}
+            例子：#box{} #blue{}
+         */
+
+        #blue{
+            color: blue;
+        }
+
+        /* 
+        将“如传世的青花瓷”和“自顾自美丽”同时设置为紫色
+
+        类选择器
+            作用：根据元素的class属性值选中一组元素
+            语法：.class属性值
+        */
+
+        .purple{
+            color: purple;
+        }
+
+        .size{
+            font-size: 20px;
+        }
+
+        /*
+        通配选择器
+            作用：选中页面中的所遇元素
+            语法：* 
+         */
+        *{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>青花瓷</h1>
+    <p>天青色等烟雨</p>
+    <p id="blue">而我在等你</p>
+    <p>月色被打捞起</p>
+    <p>晕开了结局</p>
+    <!-- 
+        class是一个标签的属性，它和id类似，不同的是class可以重复使用
+            可以通过class属性来为元素分组
+            可以同时为一个元素指定多个class，使用空格隔开
+     -->
+    <p class="purple size">如传世的青花瓷</p>
+    <p class="purple">自顾自美丽</p>
+    <p>你眼带笑意</p>
+</body>
+</html>

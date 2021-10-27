@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        ES6 引入了一种原始数据类型Symbol，表示独一无二的值。
+        他是javascript语言的第七种数据类型，是一种类似于字符串的数据类型。
+
+        Symbol特点
+            - Symbol的值时唯一的，用来解决命名冲突的问题
+            - Symbol值不能与其他数据进行运算
+            - Symbol定义的对象属性不能使用for...in循环遍历，
+                但是可以使用Reflect.ownKeys来获取对象的所有键名
+         */
+
+        //创建Symbol
+        let s = Symbol();
+        console.log(s,typeof s);
+        let s2 = Symbol('ilove');
+        let s3 = Symbol('ilove');
+        console.log(s2===s3);//false
+        //Symbol.for 创建
+        let s4 = Symbol.for('ilove');
+        console.log(s4,typeof s4);
+
+        //不能与其他数据进行运算
+        // let result = s + 100;
+        // let result = s > 100;
+        // let result = s + s;
+    </script>
+</body>
+</html>

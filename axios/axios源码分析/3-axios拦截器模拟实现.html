@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 构造函数
+        function Axios(config){
+            this.config = config;
+            this.interceptors = {
+                request: new InterceptorManager(),
+                response: new InterceptorManager(),
+            }
+        }
+
+        // 发送请求
+        Axios.prototype.request = function(config){
+            // 创建一个promise对象
+            let promise = Promise.resolve(config);
+            // 创建一个数组
+            const chains = [dispatchRequest, undefined];
+            // 处理拦截器
+            // 请求拦截器  将请求拦截器的回调，压入到chains的前面  遍历request.handles = []
+            this.interceptors.request.handlers.forEach(item => {
+                chains.unshift(item.fulfilled,item.rejected);
+            });
+            // 响应拦截器
+            this.interceptors.response.handlers.forEach(item => {
+                chains.push(item.fulfilled,item.rejected);
+            });
+
+            // 遍历
+            while(chains.length){
+                promise = promise.then(chains.shift(),chains.shift())
+            }
+
+            return promise;
+
+        }
+
+        // 发送请求
+        function dispatchRequest(config){
+            // 返回一个promise队形
+            return new Promise((resolve,reject) => {
+                resolve({
+                    status:200,
+                    statusText:'ok'
+                })
+            })
+        }
+
+        // 创建实例
+        let context = new Axios({});
+        // 创建axios函数
+        let axios = Axios.prototype.request.bind(context);
+        // 将context 属性config interceptors 添加至 axios函数对象身上
+        Object.keys(context).forEach(key => {
+            axios[key] = context[key];
+        })
+        console.dir(axios);
+
+
+        // 拦截器管理器构造函数
+        function InterceptorManager(){
+            this.handlers = [];
+        }
+
+        InterceptorManager.prototype.use = function(fulfilled,rejected){
+            this.handlers.push({
+                fulfilled,
+                rejected
+            })
+        }
+    </script>
+</body>
+</html>

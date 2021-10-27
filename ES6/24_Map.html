@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 声明Map
+        let m = new Map();
+
+        // 添加元素
+        m.set('name','zdn');
+        m.set('change',function(){
+            console.log('we can change you!');
+        });
+        let key = {
+            school:'鬼谷'
+        }
+        m.key(key,['苏秦','张仪']);
+
+        console.log(m);
+        // size
+        console.log(m.size);
+        // 获取
+        console.log(m.get('change'));
+        // 遍历
+        for(let v of m){
+            console.log(v);
+        }
+        // 删除
+        console.log(m.delete('name'));
+        // 清空
+        m.clear();
+
+
+    </script>
+</body>
+</html>

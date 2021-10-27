@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "静夜思",
+      "author": "李白"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some commet",
+      "postId": 1
+    },
+    {
+      "body": "9命，笑死",
+      "postId": 2,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

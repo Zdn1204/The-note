@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        数据类型指的就是字面量的类型
+          在js中一共有六种数据类型
+              String 字符串
+              Number 数值
+              Boolean 布尔值
+              Null 控制
+              Undefined 未定义
+              Object 对象
+
+        其中String Number Boolean Null Undefined属于基本数据类型
+          Object属于引用数据类型 
+        */
+
+        /*
+        String 字符串
+            - 在js中字符创需要使用引号引起来
+            - 使用双引号或单引号都可以，但不能混用（如：左边单引号，右边双引号）
+            - 引号不能嵌套，单引号里不能放单引号，双引号里不能方双引号
+        */
+
+        var str1 = "hello";
+
+        var str2 = '我说："今天天气真不错"';
+        /*
+            在字符串中我们可以使用\作为转义字符，
+                当表示一些特殊符号时可以使用\进行转义
+
+                \"表示"
+                \'表示'
+                \n表示换行
+                \t表示制表符（按了一下tab键）
+        */
+        var str3 = "我说：\"今天天气\n真不错\"";
+        //输出变量str
+        console.log(str1);
+
+        //输出字面量 字符串hello 
+        console.log("hello");
+
+        console.log(str2);
+        alert(str3);
+    </script>
+    <script>
+        /*
+        在js中所有的数值都是Number类型
+          包括整数和浮点数（小数）
+
+        js中能够可以表示的数字的最大值
+           Number.MAX_VALUE
+               1.7976931348623157e+308
+           Number.MIN_VALUE
+               5e-324(是一个正小数，表示能够表示的最小正数)
+           如果使用Number表示的数字超过最大值，则返回
+                Infinity（是一个字面量）表示正无穷
+                -Infinity表示负无穷
+                使用typeof检查Infinity，会返回Number
+            
+         */
+       //数字123
+       var a = 123;
+       //字符串123
+       var b = "123";
+
+       /*
+       可以使用一个运算符 typeof
+         来检查一个变量的类型
+        语法：typeof 变量
+        检查字符串时，会返回string
+        检查数值时，会返回number
+       */
+       console.log(a);
+       console.log(b);
+
+       console.log(typeof b);
+       console.log(typeof a);
+
+       console.log(Number.MAX_VALUE);
+       console.log(Number.MIN_VALUE);
+
+       var b1 = Infinity;
+       console.log(b1);
+
+       /*
+       会返回一个NaN
+       NaN 是一个特殊的数字，表示 Not A Number
+           使用typeof检查一个NaN会返回Number
+       */
+       var c = "abc"*"heon";
+       console.log(c);
+
+       var c1 = NaN;
+       console.log(typeof c1);
+
+       /*
+       在JS中的正数预算基本可以保证精确
+       */
+       var d = 123456 + 298749;
+       console.log(d);
+
+       /*
+       如果使用JS进行浮点运算，可能得出一个不精确的结果
+         所以千万不要使用JS进行对精确度要求较高的运算
+       */
+       var d1 = 0.1 + 0.2;
+       console.log(d1);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

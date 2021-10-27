@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let data = {
+            name:'xiaoming',
+            address:'bj'
+        }
+
+        /* 
+        let tmp = 'xiaoming';
+        setInterval(()=>{
+            if(data.name !== tmp){
+                tmp = data.name;
+                console.log('name被改了');
+            }
+        },100); */
+
+        /* 
+        递归调用，死循环
+        Object.defineProperty(data,'name',{
+            get(){
+                return data.name
+            },
+            set(val){
+                data.name = val
+            }
+        }) */
+
+        // 创建一个监视的实例对象，用于监视data中属性的变化，这里的data始终是最原始的那个data
+        const obs = new Observer(data);
+
+        // 准备一个vm实例对象
+        let vm = {}
+        // 这里的data变量名被占用了
+        vm._data = data = obs;
+
+        // 这里的obj是原始的data，因为这里一直引用着，所以当data变量名被占用后，原始的data对象依然存在
+        function Observer(obj){
+            // 汇总对象中所有的属性形成一个数组
+            // 返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致 
+            const keys = Object.keys(obj);
+            // 遍历
+            keys.forEach((k)=>{
+                Object.defineProperty(this,k,{
+                    get(){
+                        return obj[k];
+                    },
+                    set(val){
+                        console.log(`${k}被改了，我要去解析模板，生成虚拟DOM......我要开始忙了`)
+                        obj[k] = val;
+                    }
+                })
+            })
+
+        }
+    </script>
+</body>
+</html>

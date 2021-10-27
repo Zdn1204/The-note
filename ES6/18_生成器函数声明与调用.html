@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //生成器其实就是一个特殊的函数
+        //异步编程    纯回调函数  node  fs  ajax  mongodb
+        //yield算是函数代码的分割符
+
+        function * gen(){
+            // console.log('hello generator');
+            // console.log(1111);
+            yield 'console.log(2222)';
+            yield 'no tail';
+            // console.log(3333);
+            yield 'so strange';
+            // console.log(4444);
+        }
+
+        let iterator = gen();
+        // console.log(iterator);  报错，生成器函数不能被这样调用
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        //遍历
+       /*  for(let v of gen()){
+            console.log(v);
+        } */
+    </script>
+</body>
+</html>

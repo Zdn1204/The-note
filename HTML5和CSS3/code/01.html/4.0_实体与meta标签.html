@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        主要用语设置网页中的一些元数据，元数据不是给用户看的
+            charset 制定网页的字符集
+            name 指定数据的名称
+            content 指定数据的内容
+
+                keywords 表示网站的关键字，可同时指定多个关键字，关键字之间用逗号隔开
+                    如：<meta name="keywords" content="购物">
+                        “购物”是京东网站的关键字，所以搜索“购物”能够出现京东
+                
+                description 用于指定网站的描述，会显示在搜索引擎的搜索的结果中（下方小字）
+                    <meta name="describtion" content="为您提供愉悦的网上购物体验！"> 
+                
+            
+            <meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+            将页面重定向一个网站，例如“3秒倒计时后跳转到xx网站”
+    -->
+    <meta name="keywords" content="HTML,前端,CSS3">
+    <meta name="describtion" content="这是一个非常不错的网站">
+    <meta http-equiv="refresh" content="3;url=https://www.baidu.com">
+    <!--
+        title标签的内容会作为搜索结果的超链接上的文字显示
+    -->
+    <title>实体与meta标签</title>
+</head>
+<body>
+    <!--
+        在网页中编写的多个空格默认情况会自动被浏览器解析为一个空格
+
+        在HTML中有些事后，我们不能直接书写一些特殊符号
+            比如：多个连续的空格，比如字母两侧的大于和小于号
+
+        如果我们需要在网页中书写这些特殊的符号，则需要使用html中的实体（转义字符）
+        实体的语法：
+            &实体的名字;
+                &nbsp; 空格
+                &gt; 大于号
+                &lt; 小于号
+                &copy; 版权符号
+    -->
+    <p>
+        今天&nbsp;&nbsp;&nbsp;天气真不错！
+    </p>
+    <p>
+        a&lt;b&gt;c
+    </p>
+</body>
+</html>

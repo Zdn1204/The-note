@@ -1,0 +1,51 @@
+{
+  "id": "2704242",
+  "name": "atzdn",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "23034071",
+      "name": "餐盘盖",
+      "font_class": "canpangai",
+      "unicode": "e8b5",
+      "unicode_decimal": 59573
+    },
+    {
+      "icon_id": "23034073",
+      "name": "餐具2",
+      "font_class": "canju2",
+      "unicode": "e8b6",
+      "unicode_decimal": 59574
+    },
+    {
+      "icon_id": "23034074",
+      "name": "茶",
+      "font_class": "cha",
+      "unicode": "e8b7",
+      "unicode_decimal": 59575
+    },
+    {
+      "icon_id": "23034075",
+      "name": "餐具1",
+      "font_class": "canju1",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "23034099",
+      "name": "锅1",
+      "font_class": "guo1",
+      "unicode": "e8bc",
+      "unicode_decimal": 59580
+    },
+    {
+      "icon_id": "23034108",
+      "name": "咖啡机1",
+      "font_class": "kafeiji1",
+      "unicode": "e8be",
+      "unicode_decimal": 59582
+    }
+  ]
+}

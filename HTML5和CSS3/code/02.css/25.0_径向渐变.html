@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(30px 30px at 10px 10px,red,yellow);
+
+            /* 
+            radial-gradient() 径向兼并案（放射性的效果）
+                默认情况下，径向渐变的形状根据元素的形状来计算的
+                    正方形--->圆形
+                    长方形--->椭圆形
+                    - 我们也可以手动指定径向渐变的大小
+                    circle
+                    ellipse
+                    radial-gradient(closest-side at 10px 10px,red,yellow)渐变半径为离圆心最近的边的距离
+                    radial-gradient(farthest-side at 10px 10px,red,yellow)渐变半径为离圆心最远的边的距离
+                    closest-corner 近角
+                    farthest-corner 远角
+
+                    - 也可以指定渐变的位置
+                        radial-gradient(30px 30px at 10px 10px,red,yellow)
+                        
+
+                
+                最终语法
+                    radial-gradient(大小 at 位置，颜色 位置，颜色 位置，颜色 位置)
+                        大小：
+                            circle 圆形
+                            ellipse 椭圆形
+                            closest-side 近边
+                            closest-coener 近角
+                            farthest-side 远边
+                            farthest-corner 远角
+                        位置：
+                            top bottom left right center
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

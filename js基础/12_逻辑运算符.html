@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        js中为我们提供了三种逻辑运算符
+
+        ！非
+           - ！可以用来对一个值进行非运算
+           - 所谓非运算就是对值对一个布尔值进行取反操作
+               true便false，false变true
+           - 如果对一个值进行两次取反，它不会变化
+           - 如果对非布尔值进行运算，则会先转化为布尔值，再取反
+               所以我们可以利用该特点，将一个其它的数据类型转换为布尔值
+               可以为任意一个数据类型取两次反，来将其转换为布尔值，
+               原理和Boolean()函数一样
+
+        && 与
+           - &&可以对符号两侧的值进行与运算并返回结果
+           - 运算规则
+                 两个值中只要有一个值为false就返回false
+                    只有两个值都为true时，才会返回true
+                js中的“与”属于短路的与，如果第一个值为false，则不会看第二个值
+
+        || 或
+           - ||可以对符号两侧的值进行或运算并返回结果
+           - 运算规则
+                 两个值中只要有一个true，就返回true
+                    如果两个值都为false，才返回false
+                js中的“或”是短路的或
+                    如果第一个值为true，则不会检查第二个值
+        */
+
+        var a = true;
+        a = !a;
+        console.log("a = "+a);
+
+        var b = 10;
+        b = !b;
+        console.log("b = "+b);
+        console.log(typeof b);
+
+        //如果两个值都是true则返回true
+        var result = true && false;
+        console.log("result ="+result);
+
+        //两个值中只要有一个false，就返回false
+        result = false && true;
+        //result = true && false;
+        //result = false && false;
+        console.log("result ="+result); 
+
+        //第一个值为true，会检查第二个值
+        //true && alert("看窝出不出来！");
+
+        //第一个值为false，不会检查第二个值
+        //false && alert("我就不出来");
+
+        //两个都是false，则返回false
+        result = false || false;
+        console.log("result ="+result);
+
+        //两个值中只要有一个true，就会返回true
+        result = false || true;
+        console.log("result ="+result);
+        result = true || false;
+        console.log("result ="+result);
+        result = true || true;
+        console.log("result ="+result);
+
+        //第一个值为false，会检查第二个值
+        //false || alert("看窝出不出来！");
+
+        //第一个值为true，不会检查第二个值
+        //true || alert("我就不出来");
+
+    </script>
+
+    <script>
+        /*
+          &&  ||  非布尔值的情况
+             - 对于非布尔值进行与或运算时，
+                  会先将其转换为布尔值，然后再运算，并且返回原值
+             - 与运算：
+                   如果第一个值为true，则返回第二个值
+                   如果第一个值为false，则直接返回第一个值
+             - 或运算
+                   如果第一个值为true，则直接返回第一个值
+                   如果第一个值为false，则返回第二个值
+         */
+
+         //&&就是找false，找到即返回，没找到返回最后一个true
+
+         //true && true
+         //与运算：如果两个值都为true，则返回后边的
+         var result = 1 && 2;
+         console.log("result ="+result);
+
+
+         //如果两个值中有false，则返回靠前的false
+         //false && true
+         result = 0 && 2;
+         //result = 2 && 0；
+         console.log("result ="+result);
+
+         //false && false
+         result = NaN && 0;
+         //result = 0 && NaN;
+         console.log("result ="+result);
+
+
+         //true || true
+         //如果第一个值为true，则直接返回第一个值
+         result = 1 || 2;
+         console.log(result);
+
+         //如果第一个值为false，则直接返回第二个值
+         result = NaN || 1;
+         //result = NaN || 0;
+         console.log(result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

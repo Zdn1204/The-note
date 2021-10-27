@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        [属性名] 选择含有指定属性的元素
+        [属性名=属性值] 选择含有指定属性和属性值的元素
+        [属性名^=属性值] 选择属性值以指定值做开头的元素
+        [属性名$=属性值] 选择属性值以指定值做结尾的元素
+        [属性名*=属性值] 选择属性值中含有某值的元素
+         */
+
+         p[title]{
+             color: red;
+         }
+         p[title="Tregear"]{
+             color:blue;
+         }
+         p[title^="Z"]{
+             color: skyblue;
+         }
+         p[title$="n"]{
+             color: tomato;
+         }
+    </style>
+</head>
+<body>
+    <p title="F.I.R.">我们的爱</p>
+    <p title="Taro">过了就不再回来</p>
+    <p>直到现在</p>
+    <p>我还默默的等待</p>
+    <p>我们的爱</p>
+    <p>我明白</p>
+    <p>已变成你的负担</p>
+    <p>只是永远</p>
+    <p>我都放不开</p>
+    <p title="Tregear">最后的温暖</p>
+
+    <p>你曾是我的全部</p>
+    <p title="Zeta">只愿你挣脱情的枷锁</p>
+    <p>爱的束缚</p>
+    <p>任意追逐</p>
+    <p>别在为爱受苦</p>
+
+    <p title="Zero">我本桀骜少年臣</p>
+    <p>不信鬼神不信人</p>
+    <p>占尽人间怙恩后</p>
+    <p>尽数归还流落身</p>
+
+    <p title="Seven">奥特赛文</p>
+    <p title="Ken">奥特之父</p>
+</body>
+</html>

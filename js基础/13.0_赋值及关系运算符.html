@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+          =
+           可以将符号右侧的值赋值给符号左侧的变量
+          +=
+           a += 5等价于a = a + 5
+          -=
+           a -= 5等价于a = a - 5
+          *=
+           a *= 5等价于a = a * 5
+          /=
+           a /= 5等价于a = a / 5
+          %=
+           a %= 5等价于a = a % 5
+         */
+        var a = 10;
+        //a = a + 5;
+        a +=5
+        console.log("a ="+a);
+    </script>
+    <script>
+        /*
+         通过关系运算符可以比较两个值之间的大小关系
+            如果关系成立它会返回true，如果关系不成立则会返回false
+
+         >大于号
+           - 判断符号左侧的值是否大于右侧的
+           - 如果关系成立，返回true，如果关系不成立则返回false
+
+         >= 大于等于
+           - 判断符号左侧的值是否大于或等于右侧的值
+
+         < 小于号
+         <= 小于等于
+
+         非数值的情况
+           - 对于非数值进行比较时，会将其转换为数字，再将其比较
+           - 如果符号两侧的值都是字符串，不会将其转换为数字进行比较
+               而会分别比较字符串中字符的Unicode编码
+         */
+
+         var result = 5 > 10;//fasle
+         // result = 5 > 4; true
+         // result = 5 > 5; false
+
+         console.log(result);
+
+         result = 5 >= 5;//true
+         result = 5 >= 8;//false
+         result = 5 <= 5;//true
+         result = 5 <= 7;//true
+         result = 5 < 5;//false
+         console.log(result);
+
+         console.log(1 > true);//false
+         console.log(1 >= true);//true
+         console.log(1 >= "0");//true
+         console.log(10 > null);//true
+         console.log(10 < "hello");//任何值和NaN作任何比较，都是false
+         console.log("1" < "5");//true
+         console.log("11" < "5");//true 
+
+
+         //比较两个字符串时，比价的是字符串的字符编码
+         console.log("a" > "b");//false
+         console.log("a" < "b");//true
+
+         /*比价字符编码时是一位一位进行比较，
+           如果两位一样，则比较下一位，所以借用它来对英文进行排序
+         */
+         console.log("abc" < "b");//true
+         //比较中文时，没有意义
+         console.log("戒" > "我");//true
+
+         //如果比较的是两个字符串型的数字，会得到不可预期的结果
+         console.log("1111111111233" < "5");//true
+         //注意：在比价两个字符串型的数字时，一定一定要转型
+         console.log("1111111111233" < +"5");//false
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

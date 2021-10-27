@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [1,2,3,1,5,3,6,2,10,21]
+
+        // 1，数组去重
+        arr1 = [...new Set(arr)];
+        console.log(arr1);
+        
+        // 2，交集
+        let arr3 = [2,4,1,9,10,7];
+        /* let result = [...new Set(arr)].filter(item=>{
+            let s2 = new Set(arr3);
+            if(s2.has(item)){
+                return true;
+            }else{
+                return false;
+            }
+        }) */
+
+        let result = [...new Set(arr)].filter(item=>new Set(arr3).has(item));
+        console.log(result);
+
+        // 3，并集
+        let union = [...new Set([...arr, ...arr3])];
+        console.log(union);
+
+        // 4，差集
+        let diff = [...new Set(arr)].filter(item=>!(new Set(arr3).has(item)));
+        console.log(diff)
+
+    </script>
+</body>
+</html>
