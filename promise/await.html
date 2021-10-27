@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function main(){
+            let p = new Promise((resolve,reject)=>{
+                reject('error');
+            })
+            //1，右侧为成功的promise的情况，res为promiseresult的值
+            /* let res = await p;
+            console.log(res); */
+
+            
+            //2，右侧为失败的promise的情况，res为promiseresult的值
+            try{
+                let res3 = await p;
+            }catch(e){
+                console.log(e);
+            }
+            
+            //3，右侧为其他类型的数据
+            /* let res2 = await 20;
+            console.log(res2); */
+        }
+
+        main();
+    </script>
+</body>
+</html>
